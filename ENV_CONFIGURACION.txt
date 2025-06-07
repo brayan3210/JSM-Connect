@@ -1,0 +1,41 @@
+# 📧 CONFIGURACIÓN .ENV PARA SISTEMA DE RECUPERACIÓN DE CONTRASEÑAS
+# Copia estas líneas en tu archivo .env
+
+# Configuración de la aplicación
+APP_NAME="JSM Connect"
+APP_ENV=local
+APP_KEY=base64:tu_app_key_aqui
+APP_DEBUG=true
+APP_URL=http://127.0.0.1:8000
+
+# Configuración de base de datos (mantén tu configuración actual)
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=tu_base_de_datos
+DB_USERNAME=tu_usuario
+DB_PASSWORD=tu_password
+
+# 🔧 CONFIGURACIÓN SMTP GMAIL (OBLIGATORIA PARA EMAILS)
+MAIL_MAILER=smtp
+MAIL_HOST=smtp.gmail.com
+MAIL_PORT=587
+MAIL_USERNAME=jsmconect@gmail.com
+MAIL_PASSWORD=qwudfmsbgmjgdadx
+MAIL_ENCRYPTION=tls
+MAIL_FROM_ADDRESS=jsmconect@gmail.com
+MAIL_FROM_NAME="JSM Connect"
+
+# Configuración de colas (para envío de emails)
+QUEUE_CONNECTION=database
+
+# Configuración de cache
+CACHE_DRIVER=file
+SESSION_DRIVER=file
+
+# ✅ CONFIGURACIÓN LISTA PARA USAR
+# Solo necesitas:
+# 1. Copiar estas líneas a tu archivo .env
+# 2. Ajustar la configuración de base de datos si es necesaria
+# 3. Ejecutar: php artisan serve
+# 4. Probar en: http://127.0.0.1:8000/forgot-password 
